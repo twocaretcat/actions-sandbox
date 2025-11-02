@@ -27,10 +27,10 @@ jobs:
         with:
           version: latest
           verb: call
-          module: github.com/jerboa88/actions-sandbox-2/dagger
+          module: github.com/twocaretcat/actions-sandbox-2/dagger
           args: |2-
               --source-dir='./' \
-              --default-templates-dir='https://github.com/jerboa88/actions-sandbox-2.git#main:templates' \
+              --default-templates-dir='https://github.com/twocaretcat/actions-sandbox-2.git#main:templates' \
               --token='env://TOKEN' \
             with-nunjucks-context \
               --data-file='project-metadata.json' \
@@ -54,5 +54,5 @@ jobs:
             ./LICENSE
             :(glob)**/*.md
           committer_name: dojomentation[bot]
-          committer_email: dojomentation-bot.jerboa88@users.noreply.github.com
+          committer_email: dojomentation-bot.twocaretcat@users.noreply.github.com
           message: '📝 build docs for ${{ github.sha }} [skip ci]'
